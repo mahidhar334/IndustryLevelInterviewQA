@@ -1,0 +1,15 @@
+<template>
+    <lightning-input type="number" label="X" value={x} onchange={handleAmountChange}></lightning-input>
+    <lightning-input type="number" label="Y" value={y} onchange={handleFromCurrencyChange}></lightning-input>
+    <p>{Result}</p>
+    <lightning-button label="Add" onclick={performOperation}></lightning-button>
+    <lightning-button label="Subtract" onclick={performOperation}></lightning-button>
+    <lightning-button label="Multiply" onclick={performOperation}></lightning-button>
+    <lightning-button label="Divide" onclick={performOperation}></lightning-button>
+
+   <!-- <lightning-button label="Add" onclick={add}></lightning-button>
+    <lightning-button label="Subtract" onclick={subtract}></lightning-button>
+    <lightning-button label="Multiply" onclick={multiply}></lightning-button>
+    <lightning-button label="Divide" onclick={divide}></lightning-button>-->
+
+</template>

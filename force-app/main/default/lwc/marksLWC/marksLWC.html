@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Marks Component" icon-name="custom:custom17">
+        <div class="slds-m-around_medium">
+            <!-- Inputs -->
+            <lightning-input type="number" label="Sub1" value={sub1}
+                onchange={handleSub1Change}></lightning-input> 
+            <lightning-input type="number" label="Sub2" value={sub2}
+                onchange={handleSub2Change}></lightning-input>
+            <lightning-input type="number" label="Sub3" value={sub3}
+                onchange={handleSub3Change}></lightning-input>
+
+            <!-- Result -->
+            <p> Result is {result}</p>
+
+            <!-- Buttons -->
+            <lightning-button label="Total Marks" onclick={calculateTotal}></lightning-button>   
+            <lightning-button label="Percentage" onclick={calculatePercentage}></lightning-button>
+            <lightning-button label="Division" onclick={calculateDivision}></lightning-button>                                                          
+        </div>
+    </lightning-card>
+</template>

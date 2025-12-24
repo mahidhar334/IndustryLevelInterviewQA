@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="My First Component" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p>Hello {message}</p>
+            
+      <lightning-input label="Name" value={message} onchange={changeHandler}></lightning-input>
+        </div>
+        <div>
+            <p> 2 way binding learing -- {greeting}</p>
+            
+            <lightning-input label="Enter Text" value={greeting} onchange={changeHandler}></lightning-input>
+           
+        </div>
+        <div>
+            <lightning-button label="Submit" variant="brand" onclick={clickHandler}></lightning-button> &nbsp;
+            <lightning-button label="Hide" variant="brand" onclick={clickHandlerHide}></lightning-button> &nbsp;
+            <lightning-button label="toggle" variant="brand" onclick={clickHandleToggle}></lightning-button>&nbsp;
+            
+            <lightning-button label={handleToggleLable} variant="brand"  onclick={clickHandleToggle}></lightning-button>&nbsp;
+                <template if:true={showButton}> 
+                    <p> 'button is clickeded' </p>  
+                </template>
+                <template if:false={showButton}> 
+                    <p>  </p> 
+                </template>
+                <template if:true={toggleText}>
+                    <p>Toggle is ON</p>
+                </template>
+                <template if:false={toggleText}>
+                    <p></p>
+                </template>
+               
+                </div>
+
+                
+    </lightning-card>
+    
+</template>

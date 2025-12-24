@@ -1,0 +1,23 @@
+<!--<template>
+    <lightning-card title="onClick Component" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p>Hello {World}</p>
+            <button class="slds-button slds-button_brand slds-button_x-small" name ='button' title ='Button' onclick={changeHandler}>Click Me</button>
+            <p>check the Tasks Assigned</p>
+        </div>
+    </lightning-card>
+</template> -->
+
+<template>
+    <lightning-card title="onClick Component" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p>Hello {World}</p>
+            <button class="slds-button slds-button_brand slds-button_x-small slds-m-top_medium"
+                    onclick={onclickHandler}>
+                Click Me
+            </button>
+            <p class="slds-m-top_medium">Todays {Tasks}</p>
+            <lightning-input label="Name" value={Tasks} onchange={changeHandler}></lightning-input>
+        </div>
+    </lightning-card>
+</template>

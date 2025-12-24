@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Data Table" icon-name="standard:account">
+    <lightning-tabset variant="default">
+        <lightning-tab label="Delete Records">
+            <c-lighining-data-table></c-lighining-data-table>
+        </lightning-tab>
+        <lightning-tab label="hidecheckboxcolumn">
+            <c-lightning-column-numbers-table></c-lightning-column-numbers-table>
+        </lightning-tab>
+        <lightning-tab label="Hello Wire Function">
+            <c-wire-method></c-wire-method>
+        </lightning-tab>
+        <lightning-tab label="Wire Input Parameter to Apex">
+            <c-wire-with-input-parameter></c-wire-with-input-parameter>
+        </lightning-tab>
+    </lightning-tabset>
+    </lightning-card>
+</template>

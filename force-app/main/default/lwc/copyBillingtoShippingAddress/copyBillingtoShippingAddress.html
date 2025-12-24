@@ -1,0 +1,37 @@
+<!--<template>
+    <lightning-card title="copyBillingtoShippingAddress" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+    <lightning-input label="Billing Street" value={BillingStreet} onchange={changeHandler}></lightning-input>
+    <lightning-input label="Billing City" value={BillingCity} onchange={changeHandler}></lightning-input>
+    <lightning-input label="Billing State" value={BillingState} onchange={changeHandler}></lightning-input>
+    <lightning-input label="Billing Country" value={BillingCountry} onchange={changeHandler}></lightning-input>
+    <lightning-input label="Billing Postalcode" value={BillingPostalcode} onclick={changeHandler}></lightning-input>
+        <lightning-button class="slds-button_x-small slds-m-top_medium"
+        label="Billing is same as Shipping Address" onclick={changeHandler}>
+        </lightning-button>
+    <p class="slds-m-top_medium">Shipping Address : {ShippingStreet} , {ShippingCity} ,{ShippingState} ,{ShippingCountry} ,{ShippingPostalcode}</p>
+    </div>
+    </lightning-card>
+    
+</template> -->
+
+<template>
+    <lightning-card title="Copy Billing to Shipping Address" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Billing Street" name="BillingStreet" value={BillingStreet} onchange={changeHandler}></lightning-input>
+            <lightning-input label="Billing City" name="BillingCity" value={BillingCity} onchange={changeHandler}></lightning-input>
+            <lightning-input label="Billing State" name="BillingState" value={BillingState} onchange={changeHandler}></lightning-input>
+            <lightning-input label="Billing Country" name="BillingCountry" value={BillingCountry} onchange={changeHandler}></lightning-input>
+            <lightning-input label="Billing Postalcode" name="BillingPostalcode" value={BillingPostalcode} onchange={changeHandler}></lightning-input>
+
+            <lightning-button class="slds-button_x-small slds-m-top_medium"
+                label="Billing is same as Shipping Address" onclick={copyBillingToShipping}>
+            </lightning-button>
+
+            <p class="slds-m-top_medium">
+                <strong>Shipping Address:</strong><br>
+                {ShippingStreet}, {ShippingCity}, {ShippingState}, {ShippingCountry}, {ShippingPostalcode}
+            </p>
+        </div>
+    </lightning-card>
+</template>

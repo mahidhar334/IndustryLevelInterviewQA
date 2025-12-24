@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="New Contact" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+            
+            <!-- First Name -->
+            <lightning-input 
+                name="firstName" 
+                label="First Name" 
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Last Name -->
+            <lightning-input 
+                name="lastName" 
+                label="Last Name" 
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Email -->
+            <lightning-input 
+                name="email" 
+                type="email" 
+                label="Email" 
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Phone -->
+            <lightning-input 
+                name="phone" 
+                type="tel" 
+                label="Phone" 
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Account Lookup -->
+            <!-- If you use lightning-record-edit-form, replace with lightning-input-field field-name="AccountId" -->
+            <c-account-lookup 
+                label="Account Name" 
+                onlookupselect={handleAccountSelect}>
+            </c-account-lookup>
+
+            <!-- Save Button -->
+            <lightning-button 
+                variant="brand" 
+                label="Save" 
+                onclick={handleSave}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

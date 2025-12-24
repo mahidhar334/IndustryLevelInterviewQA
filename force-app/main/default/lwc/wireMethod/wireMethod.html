@@ -1,0 +1,26 @@
+<template>
+    <lightning-card variant="Narrow" title="Hello Wire" >
+        <lightning-datatable
+            key-field="Id"
+            columns={columnsList}
+            data={dataList}
+            onrowselection={handleSelectedRows}>
+        </lightning-datatable>
+
+        <lightning-button-group>
+            <lightning-button label="Create" onclick={handleCreate}></lightning-button>
+            <lightning-button label="Edit" onclick={handleEdit} disabled={disabled}></lightning-button>
+            <lightning-button label="Delete" onclick={handleDelete} disabled={disabled}></lightning-button>
+        </lightning-button-group>
+
+        <!-- Show custom Contact form when Create is clicked -->
+        <template if:true={showCreateForm}>
+            <c-create-contact-form 
+                account-id={selectedAccountId} 
+                onrefresh={handleFormClose}>
+            </c-create-contact-form>
+        </template>
+
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

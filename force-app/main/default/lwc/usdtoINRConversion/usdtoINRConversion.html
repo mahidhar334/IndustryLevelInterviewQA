@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Currency Converter">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Amount" type="number" value={amount} onchange={handleAmountChange}></lightning-input>
+            <lightning-combobox label="From Currency" value={fromCurrency} options={currencyOptions} onchange={handleFromCurrencyChange}></lightning-combobox>
+            <lightning-combobox label="To Currency" value={toCurrency} options={currencyOptions} onchange={handleToCurrencyChange}></lightning-combobox>
+            <div class="slds-m-top_medium">Converted Amount: {convertedAmount}</div>
+        </div>
+    </lightning-card>
+</template>

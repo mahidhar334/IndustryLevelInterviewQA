@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="child Comp" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+      <p>Hello {firstName}! , {greeting}</p>
+      <br>
+      Name in Lower case : {lowercaseLastName}
+
+      <br>
+      Name in Upper case : {lastName}
+      
+      <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+    </div>
+  </lightning-card>
+</template>

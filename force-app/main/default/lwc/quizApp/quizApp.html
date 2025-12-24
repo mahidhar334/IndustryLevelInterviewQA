@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Quiz App in LWC" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <template for:each={myQuestions} for:item="quiz">
+                <div key={quiz.id} class="slds-m-bottom_medium">
+                    <div><strong>{quiz.id} - {quiz.question}</strong></div>
+                    <lightning-radio-group
+                        name={quiz.id}
+                        label="Choose an answer"
+                        options={quiz.answers}
+                        value={quiz.selectedAnswer}
+                        onchange={handleAnswerChange}>
+                    </lightning-radio-group>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

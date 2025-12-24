@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Column Numbers">
+
+       <p> selected rows :{selectedRows.length}</p>
+        <!--<lightning-button variant="brand" label="accountData" title="titleName" onclick={getAccounts}></lightning-button> 
+        <lightning-button variant="destructive" label="delete" title="Delete Accounts" onclick={handleDelete}></lightning-button>-->
+
+        <!-- Datatable -->
+        <lightning-datatable
+            key-field="Id"
+            data={dataList}
+            columns={columnsList}
+            hide-checkbox-column
+            show-row-number-column>
+        </lightning-datatable>
+
+        <!-- Error handling -->
+        <template if:true={error}>
+            <p class="slds-text-color_error">Error loading accounts</p>
+        </template>
+    </lightning-card>
+</template>
