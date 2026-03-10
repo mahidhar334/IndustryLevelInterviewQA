@@ -1,0 +1,47 @@
+public with sharing class DelloiteHandle{
+
+
+	public static void deloiteScenarione(List<Contact> conList , Map<Id, Contact> conMap){
+	
+		Set<Id> accIds = New Set<id>();
+		Map<Id, Contact> conAccMap = New Map<Id, Contact>();
+		List<Account> accList = New List<Account>();
+	
+		for(Contact con : conList){
+		
+			Contact oldMap = conMap.containskey(con.AccountId) ? conMap.get(con.AccountId) : NULL;
+		
+			if(con.AccountId != '' && con.Primary == true && (oldMap == NULL || oldMap.primary != con.Priamry && con.Primary == True){
+		
+			accIds.add(con.AccountId);
+			}
+		}
+		
+			for(Contact con : [select id,Accountid , primary from contact where accountid in : accIds AND primary = true]){
+				conAccMap.put(con.AccountId , con);
+			}
+		If(!conAccMap.isEmpty(){
+				for(Contact con : conList){
+					if(conAccMap.containskey(con.Accountid){
+						con.adderror('Primary Already exist on Account');
+					}
+				else{
+				
+					Account Acc = New Account();
+					Acc.id = con.AccountId;
+					Acc.ContactId = con.id;
+					accList.add(Acc);
+					}
+				}
+		}
+		
+		If(!accList.isEmpty()){
+			Update accList;
+			}
+	}
+}
+
+
+Trigger COntactTrigger on Contact(Before Insert, Before Update){
+DelloiteHandler.deloiteScenarione(Trigger.New , Trigger.OldMap);
+}
