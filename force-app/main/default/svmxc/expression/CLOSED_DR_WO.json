@@ -1,0 +1,38 @@
+{
+  "name": "Closed Depot Repair Work Orders",
+  "isStandard": false,
+  "developerName": "CLOSED_DR_WO",
+  "parentObjectCriteria": "SVMXC__Order_Status__c='Closed' AND SVMXC__Order_Type__c='Depot Repair'",
+  "ruleType": "Named Expression",
+  "objectAPIName": "SVMXC__Service_Order__c",
+  "recordTypeId": "SVMX Rule",
+  "advancedExpression": "1 AND 2",
+  "expressionDetails": [
+    {
+      "value": "Closed",
+      "type": "EXP_Named",
+      "targetField": "SVMXC__Order_Status__c",
+      "sequence": 1,
+      "operator": "eq",
+      "operandType": "Value",
+      "operand": "Closed",
+      "recordTypeId": "Expressions",
+      "fieldType": "PICKLIST",
+      "fieldAPIName": "SVMXC__Order_Status__c",
+      "actionType": "EXP_Named"
+    },
+    {
+      "value": "Depot Repair",
+      "type": "EXP_Named",
+      "targetField": "SVMXC__Order_Type__c",
+      "sequence": 2,
+      "operator": "eq",
+      "operandType": "Value",
+      "operand": "Depot Repair",
+      "recordTypeId": "Expressions",
+      "fieldType": "PICKLIST",
+      "fieldAPIName": "SVMXC__Order_Type__c",
+      "actionType": "EXP_Named"
+    }
+  ]
+}
